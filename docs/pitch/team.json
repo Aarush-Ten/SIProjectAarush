@@ -1,0 +1,20 @@
+{
+  "applicant": {
+    "name": "Aarush Tendulkar",
+    "role": "Team Lead",
+    "qualification": null,
+    "contact": null
+  },
+  "team_name": "CYBERSTARS",
+  "team_size": 1,
+  "members": [
+    {
+      "name": "Aarush Tendulkar",
+      "role": "Team Lead"
+    }
+  ],
+  "project": "PathForge AI",
+  "competition": "Seva First Innovation Challenge — Maharashtra Zone",
+  "category": "General Category",
+  "sector": "Education and Employability"
+}

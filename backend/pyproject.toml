@@ -1,0 +1,20 @@
+[project]
+name = "pathforge-backend"
+version = "0.1.0"
+requires-python = ">=3.12"
+description = "PathForge AI Phases 1 and 2 deterministic career exploration and learning plans"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-ra"
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.ruff.lint.per-file-ignores]
+"app/api/routes.py" = ["B008"]

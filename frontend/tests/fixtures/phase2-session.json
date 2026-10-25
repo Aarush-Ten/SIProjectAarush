@@ -1,0 +1,1093 @@
+{
+  "version": 2,
+  "profile": {
+    "profile": {
+      "education_level": "diploma",
+      "study_field": "Computer engineering",
+      "goal": "career_exploration",
+      "hours_per_week": 6,
+      "budget_inr": 0,
+      "device_access": "laptop",
+      "language": "en"
+    },
+    "skills": [
+      {
+        "skill_id": "python",
+        "self_reported_level": 2
+      },
+      {
+        "skill_id": "html",
+        "self_reported_level": 2
+      },
+      {
+        "skill_id": "sql",
+        "self_reported_level": 1
+      }
+    ],
+    "interests": [
+      "cybersecurity"
+    ]
+  },
+  "formValues": {
+    "education_level": "diploma",
+    "study_field": "Computer engineering",
+    "goal": "career_exploration",
+    "hours_per_week": 6,
+    "budget_inr": 0,
+    "device_access": "laptop",
+    "language": "en",
+    "skills": [
+      {
+        "skill_id": "python",
+        "self_reported_level": 2
+      },
+      {
+        "skill_id": "html",
+        "self_reported_level": 2
+      },
+      {
+        "skill_id": "sql",
+        "self_reported_level": 1
+      }
+    ],
+    "interests": [
+      "cybersecurity"
+    ],
+    "consent": true
+  },
+  "results": {
+    "matches": [
+      {
+        "career": {
+          "slug": "soc-analyst",
+          "title": "SOC Analyst (junior)",
+          "summary": "Explore defensive security through supervised alert triage and clear incident notes.",
+          "interest_tags": [
+            "cybersecurity"
+          ],
+          "device_requirement": "computer",
+          "recommended_hours_per_week": 8,
+          "practice_budget_inr": 0,
+          "device_note": "Computer access is needed for practical exercises; a phone can support reading.",
+          "source_note": "curated_demo",
+          "tasks": [
+            "Review illustrative alerts",
+            "Record triage observations",
+            "Escalate using a playbook"
+          ],
+          "skills": [
+            {
+              "skill_id": "python",
+              "label": "Python",
+              "required_level": 2,
+              "importance": "essential",
+              "weight": 3
+            },
+            {
+              "skill_id": "networking",
+              "label": "Networking",
+              "required_level": 2,
+              "importance": "essential",
+              "weight": 5
+            },
+            {
+              "skill_id": "linux",
+              "label": "Linux",
+              "required_level": 2,
+              "importance": "essential",
+              "weight": 5
+            },
+            {
+              "skill_id": "security_basics",
+              "label": "Security basics",
+              "required_level": 2,
+              "importance": "essential",
+              "weight": 5
+            },
+            {
+              "skill_id": "incident_response",
+              "label": "Incident response",
+              "required_level": 1,
+              "importance": "essential",
+              "weight": 3
+            },
+            {
+              "skill_id": "sql",
+              "label": "SQL",
+              "required_level": 1,
+              "importance": "optional",
+              "weight": 2
+            },
+            {
+              "skill_id": "communication",
+              "label": "Communication",
+              "required_level": 2,
+              "importance": "optional",
+              "weight": 2
+            },
+            {
+              "skill_id": "git",
+              "label": "Git",
+              "required_level": 1,
+              "importance": "optional",
+              "weight": 1
+            }
+          ]
+        },
+        "coverage": 14.29,
+        "interest_match": 100.0,
+        "interest_status": "matched",
+        "feasibility": {
+          "score": 90.0,
+          "components": [
+            {
+              "factor": "schedule",
+              "score": 75.0,
+              "weight": 0.4,
+              "reason": "6 hours/week compared with an illustrative 8-hour practice target."
+            },
+            {
+              "factor": "device",
+              "score": 100.0,
+              "weight": 0.4,
+              "reason": "Computer access is needed for practical exercises; a phone can support reading."
+            },
+            {
+              "factor": "budget",
+              "score": 100.0,
+              "weight": 0.2,
+              "reason": "INR 0 available against an illustrative INR 0 practice budget; actual costs vary."
+            }
+          ],
+          "warnings": [
+            "Your available time may mean a slower learning pace."
+          ]
+        },
+        "fit_score": 47.07,
+        "missing_skills": [
+          {
+            "skill_id": "incident_response",
+            "label": "Incident response",
+            "user_level": 0,
+            "required_level": 1,
+            "missing_level": 1,
+            "importance": "essential"
+          },
+          {
+            "skill_id": "linux",
+            "label": "Linux",
+            "user_level": 0,
+            "required_level": 2,
+            "missing_level": 2,
+            "importance": "essential"
+          },
+          {
+            "skill_id": "networking",
+            "label": "Networking",
+            "user_level": 0,
+            "required_level": 2,
+            "missing_level": 2,
+            "importance": "essential"
+          },
+          {
+            "skill_id": "security_basics",
+            "label": "Security basics",
+            "user_level": 0,
+            "required_level": 2,
+            "missing_level": 2,
+            "importance": "essential"
+          },
+          {
+            "skill_id": "communication",
+            "label": "Communication",
+            "user_level": 0,
+            "required_level": 2,
+            "missing_level": 2,
+            "importance": "optional"
+          },
+          {
+            "skill_id": "git",
+            "label": "Git",
+            "user_level": 0,
+            "required_level": 1,
+            "missing_level": 1,
+            "importance": "optional"
+          }
+        ],
+        "reasons": [
+          "Self-reported skills cover 14.29% of weighted essential requirements.",
+          "1 of 1 interest tags overlap.",
+          "4 essential skills have a remaining level gap.",
+          "Feasibility combines schedule (40%), device (40%) and practice budget (20%)."
+        ]
+      },
+      {
+        "career": {
+          "slug": "frontend-developer",
+          "title": "Frontend Developer",
+          "summary": "Build accessible, responsive browser interfaces and review their behavior.",
+          "interest_tags": [
+            "web_development",
+            "design"
+          ],
+          "device_requirement": "computer",
+          "recommended_hours_per_week": 8,
+          "practice_budget_inr": 0,
+          "device_note": "Computer access is needed for practical exercises; a phone can support reading.",
+          "source_note": "curated_demo",
+          "tasks": [
+            "Implement interface components",
+            "Check small-screen layouts",
+            "Review code changes"
+          ],
+          "skills": [
+            {
+              "skill_id": "html",
+              "label": "HTML",
+              "required_level": 2,
+              "importance": "essential",
+              "weight": 5
+            },
+            {
+              "skill_id": "css",
+              "label": "CSS",
+              "required_level": 2,
+              "importance": "essential",
+              "weight": 5
+            },
+            {
+              "skill_id": "javascript",
+              "label": "JavaScript",
+              "required_level": 2,
+              "importance": "essential",
+              "weight": 5
+            },
+            {
+              "skill_id": "git",
+              "label": "Git",
+              "required_level": 1,
+              "importance": "essential",
+              "weight": 2
+            },
+            {
+              "skill_id": "accessibility",
+              "label": "Accessibility",
+              "required_level": 2,
+              "importance": "optional",
+              "weight": 2
+            },
+            {
+              "skill_id": "testing",
+              "label": "Software testing",
+              "required_level": 1,
+              "importance": "optional",
+              "weight": 2
+            },
+            {
+              "skill_id": "visual_design",
+              "label": "Visual design",
+              "required_level": 1,
+              "importance": "optional",
+              "weight": 1
+            }
+          ]
+        },
+        "coverage": 29.41,
+        "interest_match": 0.0,
+        "interest_status": "matched",
+        "feasibility": {
+          "score": 90.0,
+          "components": [
+            {
+              "factor": "schedule",
+              "score": 75.0,
+              "weight": 0.4,
+              "reason": "6 hours/week compared with an illustrative 8-hour practice target."
+            },
+            {
+              "factor": "device",
+              "score": 100.0,
+              "weight": 0.4,
+              "reason": "Computer access is needed for practical exercises; a phone can support reading."
+            },
+            {
+              "factor": "budget",
+              "score": 100.0,
+              "weight": 0.2,
+              "reason": "INR 0 available against an illustrative INR 0 practice budget; actual costs vary."
+            }
+          ],
+          "warnings": [
+            "Your available time may mean a slower learning pace."
+          ]
+        },
+        "fit_score": 31.15,
+        "missing_skills": [
+          {
+            "skill_id": "css",
+            "label": "CSS",
+            "user_level": 0,
+            "required_level": 2,
+            "missing_level": 2,
+            "importance": "essential"
+          },
+          {
+            "skill_id": "git",
+            "label": "Git",
+            "user_level": 0,
+            "required_level": 1,
+            "missing_level": 1,
+            "importance": "essential"
+          },
+          {
+            "skill_id": "javascript",
+            "label": "JavaScript",
+            "user_level": 0,
+            "required_level": 2,
+            "missing_level": 2,
+            "importance": "essential"
+          },
+          {
+            "skill_id": "accessibility",
+            "label": "Accessibility",
+            "user_level": 0,
+            "required_level": 2,
+            "missing_level": 2,
+            "importance": "optional"
+          },
+          {
+            "skill_id": "testing",
+            "label": "Software testing",
+            "user_level": 0,
+            "required_level": 1,
+            "missing_level": 1,
+            "importance": "optional"
+          },
+          {
+            "skill_id": "visual_design",
+            "label": "Visual design",
+            "user_level": 0,
+            "required_level": 1,
+            "missing_level": 1,
+            "importance": "optional"
+          }
+        ],
+        "reasons": [
+          "Self-reported skills cover 29.41% of weighted essential requirements.",
+          "0 of 2 interest tags overlap.",
+          "3 essential skills have a remaining level gap.",
+          "Feasibility combines schedule (40%), device (40%) and practice budget (20%)."
+        ]
+      },
+      {
+        "career": {
+          "slug": "data-analyst",
+          "title": "Data Analyst (junior)",
+          "summary": "Prepare tabular data and communicate careful, limited conclusions from it.",
+          "interest_tags": [
+            "data"
+          ],
+          "device_requirement": "computer",
+          "recommended_hours_per_week": 8,
+          "practice_budget_inr": 0,
+          "device_note": "Computer access is needed for practical exercises; a phone can support reading.",
+          "source_note": "curated_demo",
+          "tasks": [
+            "Clean a small dataset",
+            "Query a question",
+            "Explain a chart and its limitations"
+          ],
+          "skills": [
+            {
+              "skill_id": "spreadsheets",
+              "label": "Spreadsheets",
+              "required_level": 2,
+              "importance": "essential",
+              "weight": 4
+            },
+            {
+              "skill_id": "sql",
+              "label": "SQL",
+              "required_level": 2,
+              "importance": "essential",
+              "weight": 5
+            },
+            {
+              "skill_id": "statistics",
+              "label": "Basic statistics",
+              "required_level": 2,
+              "importance": "essential",
+              "weight": 4
+            },
+            {
+              "skill_id": "data_visualization",
+              "label": "Data visualization",
+              "required_level": 2,
+              "importance": "essential",
+              "weight": 4
+            },
+            {
+              "skill_id": "python",
+              "label": "Python",
+              "required_level": 2,
+              "importance": "optional",
+              "weight": 3
+            },
+            {
+              "skill_id": "communication",
+              "label": "Communication",
+              "required_level": 2,
+              "importance": "optional",
+              "weight": 2
+            },
+            {
+              "skill_id": "analytics",
+              "label": "Digital analytics",
+              "required_level": 1,
+              "importance": "optional",
+              "weight": 1
+            }
+          ]
+        },
+        "coverage": 14.71,
+        "interest_match": 0.0,
+        "interest_status": "matched",
+        "feasibility": {
+          "score": 90.0,
+          "components": [
+            {
+              "factor": "schedule",
+              "score": 75.0,
+              "weight": 0.4,
+              "reason": "6 hours/week compared with an illustrative 8-hour practice target."
+            },
+            {
+              "factor": "device",
+              "score": 100.0,
+              "weight": 0.4,
+              "reason": "Computer access is needed for practical exercises; a phone can support reading."
+            },
+            {
+              "factor": "budget",
+              "score": 100.0,
+              "weight": 0.2,
+              "reason": "INR 0 available against an illustrative INR 0 practice budget; actual costs vary."
+            }
+          ],
+          "warnings": [
+            "Your available time may mean a slower learning pace."
+          ]
+        },
+        "fit_score": 22.32,
+        "missing_skills": [
+          {
+            "skill_id": "data_visualization",
+            "label": "Data visualization",
+            "user_level": 0,
+            "required_level": 2,
+            "missing_level": 2,
+            "importance": "essential"
+          },
+          {
+            "skill_id": "spreadsheets",
+            "label": "Spreadsheets",
+            "user_level": 0,
+            "required_level": 2,
+            "missing_level": 2,
+            "importance": "essential"
+          },
+          {
+            "skill_id": "sql",
+            "label": "SQL",
+            "user_level": 1,
+            "required_level": 2,
+            "missing_level": 1,
+            "importance": "essential"
+          },
+          {
+            "skill_id": "statistics",
+            "label": "Basic statistics",
+            "user_level": 0,
+            "required_level": 2,
+            "missing_level": 2,
+            "importance": "essential"
+          },
+          {
+            "skill_id": "analytics",
+            "label": "Digital analytics",
+            "user_level": 0,
+            "required_level": 1,
+            "missing_level": 1,
+            "importance": "optional"
+          },
+          {
+            "skill_id": "communication",
+            "label": "Communication",
+            "user_level": 0,
+            "required_level": 2,
+            "missing_level": 2,
+            "importance": "optional"
+          }
+        ],
+        "reasons": [
+          "Self-reported skills cover 14.71% of weighted essential requirements.",
+          "0 of 1 interest tags overlap.",
+          "4 essential skills have a remaining level gap.",
+          "Feasibility combines schedule (40%), device (40%) and practice budget (20%)."
+        ]
+      }
+    ],
+    "total_careers_evaluated": 12,
+    "formula": {
+      "coverage_weight": 0.6,
+      "interest_weight": 0.25,
+      "feasibility_weight": 0.15
+    },
+    "notice": "Illustrative career exploration only. Coverage reflects self-reported skills, not verified competence or an employment probability. Catalog requirements, time and practice budgets are curated demo assumptions."
+  },
+  "selectedCareerSlug": "soc-analyst",
+  "roadmap": {
+    "id": "roadmap-b6c65bf45c48073c",
+    "career_slug": "soc-analyst",
+    "career_title": "SOC Analyst (junior)",
+    "selected_match": {
+      "career": {
+        "slug": "soc-analyst",
+        "title": "SOC Analyst (junior)",
+        "summary": "Explore defensive security through supervised alert triage and clear incident notes.",
+        "interest_tags": [
+          "cybersecurity"
+        ],
+        "device_requirement": "computer",
+        "recommended_hours_per_week": 8,
+        "practice_budget_inr": 0,
+        "device_note": "Computer access is needed for practical exercises; a phone can support reading.",
+        "source_note": "curated_demo",
+        "tasks": [
+          "Review illustrative alerts",
+          "Record triage observations",
+          "Escalate using a playbook"
+        ],
+        "skills": [
+          {
+            "skill_id": "python",
+            "label": "Python",
+            "required_level": 2,
+            "importance": "essential",
+            "weight": 3
+          },
+          {
+            "skill_id": "networking",
+            "label": "Networking",
+            "required_level": 2,
+            "importance": "essential",
+            "weight": 5
+          },
+          {
+            "skill_id": "linux",
+            "label": "Linux",
+            "required_level": 2,
+            "importance": "essential",
+            "weight": 5
+          },
+          {
+            "skill_id": "security_basics",
+            "label": "Security basics",
+            "required_level": 2,
+            "importance": "essential",
+            "weight": 5
+          },
+          {
+            "skill_id": "incident_response",
+            "label": "Incident response",
+            "required_level": 1,
+            "importance": "essential",
+            "weight": 3
+          },
+          {
+            "skill_id": "sql",
+            "label": "SQL",
+            "required_level": 1,
+            "importance": "optional",
+            "weight": 2
+          },
+          {
+            "skill_id": "communication",
+            "label": "Communication",
+            "required_level": 2,
+            "importance": "optional",
+            "weight": 2
+          },
+          {
+            "skill_id": "git",
+            "label": "Git",
+            "required_level": 1,
+            "importance": "optional",
+            "weight": 1
+          }
+        ]
+      },
+      "coverage": 14.29,
+      "interest_match": 100.0,
+      "interest_status": "matched",
+      "feasibility": {
+        "score": 90.0,
+        "components": [
+          {
+            "factor": "schedule",
+            "score": 75.0,
+            "weight": 0.4,
+            "reason": "6 hours/week compared with an illustrative 8-hour practice target."
+          },
+          {
+            "factor": "device",
+            "score": 100.0,
+            "weight": 0.4,
+            "reason": "Computer access is needed for practical exercises; a phone can support reading."
+          },
+          {
+            "factor": "budget",
+            "score": 100.0,
+            "weight": 0.2,
+            "reason": "INR 0 available against an illustrative INR 0 practice budget; actual costs vary."
+          }
+        ],
+        "warnings": [
+          "Your available time may mean a slower learning pace."
+        ]
+      },
+      "fit_score": 47.07,
+      "missing_skills": [
+        {
+          "skill_id": "incident_response",
+          "label": "Incident response",
+          "user_level": 0,
+          "required_level": 1,
+          "missing_level": 1,
+          "importance": "essential"
+        },
+        {
+          "skill_id": "linux",
+          "label": "Linux",
+          "user_level": 0,
+          "required_level": 2,
+          "missing_level": 2,
+          "importance": "essential"
+        },
+        {
+          "skill_id": "networking",
+          "label": "Networking",
+          "user_level": 0,
+          "required_level": 2,
+          "missing_level": 2,
+          "importance": "essential"
+        },
+        {
+          "skill_id": "security_basics",
+          "label": "Security basics",
+          "user_level": 0,
+          "required_level": 2,
+          "missing_level": 2,
+          "importance": "essential"
+        },
+        {
+          "skill_id": "communication",
+          "label": "Communication",
+          "user_level": 0,
+          "required_level": 2,
+          "missing_level": 2,
+          "importance": "optional"
+        },
+        {
+          "skill_id": "git",
+          "label": "Git",
+          "user_level": 0,
+          "required_level": 1,
+          "missing_level": 1,
+          "importance": "optional"
+        }
+      ],
+      "reasons": [
+        "Self-reported skills cover 14.29% of weighted essential requirements.",
+        "1 of 1 interest tags overlap.",
+        "4 essential skills have a remaining level gap.",
+        "Feasibility combines schedule (40%), device (40%) and practice budget (20%)."
+      ]
+    },
+    "formula": {
+      "coverage_weight": 0.6,
+      "interest_weight": 0.25,
+      "feasibility_weight": 0.15
+    },
+    "generation_source": "rules",
+    "hours_per_week": 6,
+    "total_hours": 21.0,
+    "estimated_weeks": 4,
+    "estimated_cost_inr": 0.0,
+    "weeks": [
+      {
+        "week_number": 1,
+        "total_hours": 6.0,
+        "tasks": [
+          {
+            "id": "roadmap-b6c65bf45c48073c-essential-linux-1",
+            "skill_id": "linux",
+            "skill_label": "Linux",
+            "title": "Practise: Linux",
+            "description": "Study toward level 2 from reported/planned level 0. Allocated hours are illustrative and do not certify a skill level. Use the linked reference selectively; this is not its full course duration.",
+            "activity": "Use a local practice directory to demonstrate files, paths, and permissions.",
+            "verification": "Save your notes or artifact and explain one decision, one limitation, and the next practical check to a peer, trainer, or yourself. Completion is self-reported.",
+            "estimated_hours": 4.0,
+            "resource": {
+              "id": "ubuntu-command-line",
+              "title": "The Linux command line for beginners",
+              "provider": "Canonical / Ubuntu",
+              "url": "https://ubuntu.com/tutorials/command-line-for-beginners",
+              "cost_inr": 0.0,
+              "is_free": true,
+              "skill_ids": [
+                "linux"
+              ],
+              "estimated_hours": 4.0,
+              "source_note": "Checked official public reading on 2026-10-24. Free refers to the linked text, not software, certification or practical equipment. Hours are a curated demo study allocation, not the provider's course duration. Phone reading does not replace computer practice or qualified supervision. This accessible tutorial also points to a newer Ubuntu documentation version.",
+              "last_checked": "2026-10-24",
+              "device_requirement": "any"
+            },
+            "mode": "practical",
+            "device_requirement": "computer",
+            "device_note": "Use suitable computer access for this local practice exercise.",
+            "alternative": null,
+            "prerequisite_task_ids": [],
+            "part": 1,
+            "total_parts": 1,
+            "importance": "essential"
+          },
+          {
+            "id": "roadmap-b6c65bf45c48073c-essential-networking-1",
+            "skill_id": "networking",
+            "skill_label": "Networking",
+            "title": "Practise: Networking (part 1/2)",
+            "description": "Study toward level 2 from reported/planned level 0. Allocated hours are illustrative and do not certify a skill level. Use the linked reference selectively; this is not its full course duration.",
+            "activity": "Draw a fictional network and trace how a browser reaches a named website.",
+            "verification": "Save your notes or artifact and explain one decision, one limitation, and the next practical check to a peer, trainer, or yourself. Completion is self-reported.",
+            "estimated_hours": 2.0,
+            "resource": {
+              "id": "mdn-internet",
+              "title": "How the Internet works",
+              "provider": "MDN Web Docs",
+              "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work",
+              "cost_inr": 0.0,
+              "is_free": true,
+              "skill_ids": [
+                "networking"
+              ],
+              "estimated_hours": 2.0,
+              "source_note": "Checked official public reading on 2026-10-24. Free refers to the linked text, not software, certification or practical equipment. Hours are a curated demo study allocation, not the provider's course duration. Phone reading does not replace computer practice or qualified supervision.",
+              "last_checked": "2026-10-24",
+              "device_requirement": "any"
+            },
+            "mode": "practical",
+            "device_requirement": "computer",
+            "device_note": "Use suitable computer access for this local practice exercise.",
+            "alternative": null,
+            "prerequisite_task_ids": [],
+            "part": 1,
+            "total_parts": 2,
+            "importance": "essential"
+          }
+        ]
+      },
+      {
+        "week_number": 2,
+        "total_hours": 6.0,
+        "tasks": [
+          {
+            "id": "roadmap-b6c65bf45c48073c-essential-networking-2",
+            "skill_id": "networking",
+            "skill_label": "Networking",
+            "title": "Practise: Networking (part 2/2)",
+            "description": "Study toward level 2 from reported/planned level 0. Allocated hours are illustrative and do not certify a skill level. Use the linked reference selectively; this is not its full course duration.",
+            "activity": "Draw a fictional network and trace how a browser reaches a named website.",
+            "verification": "Save your notes or artifact and explain one decision, one limitation, and the next practical check to a peer, trainer, or yourself. Completion is self-reported.",
+            "estimated_hours": 2.0,
+            "resource": {
+              "id": "mdn-internet",
+              "title": "How the Internet works",
+              "provider": "MDN Web Docs",
+              "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work",
+              "cost_inr": 0.0,
+              "is_free": true,
+              "skill_ids": [
+                "networking"
+              ],
+              "estimated_hours": 2.0,
+              "source_note": "Checked official public reading on 2026-10-24. Free refers to the linked text, not software, certification or practical equipment. Hours are a curated demo study allocation, not the provider's course duration. Phone reading does not replace computer practice or qualified supervision.",
+              "last_checked": "2026-10-24",
+              "device_requirement": "any"
+            },
+            "mode": "practical",
+            "device_requirement": "computer",
+            "device_note": "Use suitable computer access for this local practice exercise.",
+            "alternative": null,
+            "prerequisite_task_ids": [
+              "roadmap-b6c65bf45c48073c-essential-networking-1"
+            ],
+            "part": 2,
+            "total_parts": 2,
+            "importance": "essential"
+          },
+          {
+            "id": "roadmap-b6c65bf45c48073c-essential-security_basics-1",
+            "skill_id": "security_basics",
+            "skill_label": "Security basics",
+            "title": "Practise: Security basics",
+            "description": "Study toward level 2 from reported/planned level 0. Allocated hours are illustrative and do not certify a skill level. Use the linked reference selectively; this is not its full course duration.",
+            "activity": "Write a threat-and-mitigation checklist for a fictional student device.",
+            "verification": "Save your notes or artifact and explain one decision, one limitation, and the next practical check to a peer, trainer, or yourself. Completion is self-reported.",
+            "estimated_hours": 4.0,
+            "resource": {
+              "id": "nist-security",
+              "title": "Cybersecurity Framework: orientation reading",
+              "provider": "NIST",
+              "url": "https://www.nist.gov/cyberframework",
+              "cost_inr": 0.0,
+              "is_free": true,
+              "skill_ids": [
+                "security_basics"
+              ],
+              "estimated_hours": 2.0,
+              "source_note": "Checked official public reading on 2026-10-24. Free refers to the linked text, not software, certification or practical equipment. Hours are a curated demo study allocation, not the provider's course duration. Phone reading does not replace computer practice or qualified supervision.",
+              "last_checked": "2026-10-24",
+              "device_requirement": "any"
+            },
+            "mode": "practical",
+            "device_requirement": "any",
+            "device_note": "A written or sketched example can be prepared with your available device.",
+            "alternative": null,
+            "prerequisite_task_ids": [
+              "roadmap-b6c65bf45c48073c-essential-networking-2"
+            ],
+            "part": 1,
+            "total_parts": 1,
+            "importance": "essential"
+          }
+        ]
+      },
+      {
+        "week_number": 3,
+        "total_hours": 6.0,
+        "tasks": [
+          {
+            "id": "roadmap-b6c65bf45c48073c-essential-incident_response-1",
+            "skill_id": "incident_response",
+            "skill_label": "Incident response",
+            "title": "Practise: Incident response",
+            "description": "Study toward level 1 from reported/planned level 0. Allocated hours are illustrative and do not certify a skill level. Use the linked reference selectively; this is not its full course duration.",
+            "activity": "Triage a fictional alert and write observations, uncertainty, and escalation notes.",
+            "verification": "Save your notes or artifact and explain one decision, one limitation, and the next practical check to a peer, trainer, or yourself. Completion is self-reported.",
+            "estimated_hours": 2.0,
+            "resource": {
+              "id": "nist-incident-response",
+              "title": "Incident response recommendations: overview",
+              "provider": "NIST",
+              "url": "https://csrc.nist.gov/pubs/sp/800/61/r3/final",
+              "cost_inr": 0.0,
+              "is_free": true,
+              "skill_ids": [
+                "incident_response"
+              ],
+              "estimated_hours": 2.0,
+              "source_note": "Checked official public reading on 2026-10-24. Free refers to the linked text, not software, certification or practical equipment. Hours are a curated demo study allocation, not the provider's course duration. Phone reading does not replace computer practice or qualified supervision. Publication landing page and freely available report; introductory selected reading.",
+              "last_checked": "2026-10-24",
+              "device_requirement": "any"
+            },
+            "mode": "practical",
+            "device_requirement": "computer",
+            "device_note": "Use suitable computer access for this local practice exercise.",
+            "alternative": null,
+            "prerequisite_task_ids": [
+              "roadmap-b6c65bf45c48073c-essential-networking-2",
+              "roadmap-b6c65bf45c48073c-essential-linux-1",
+              "roadmap-b6c65bf45c48073c-essential-security_basics-1"
+            ],
+            "part": 1,
+            "total_parts": 1,
+            "importance": "essential"
+          },
+          {
+            "id": "roadmap-b6c65bf45c48073c-core-milestone-1",
+            "skill_id": "python",
+            "skill_label": "Career mini-project",
+            "title": "Mini-project: explain a realistic case",
+            "description": "Review your essential study in one small manual-verification milestone; no quiz or readiness badge is awarded.",
+            "activity": "Combine your essential study into a small local SOC Analyst (junior) example. Save an artifact and describe its purpose, checks, and limitations.",
+            "verification": "Use a checklist to explain your result and one unresolved gap; record what further practice or trainer feedback is needed.",
+            "estimated_hours": 1.0,
+            "resource": null,
+            "mode": "milestone",
+            "device_requirement": "computer",
+            "device_note": "Computer access is needed for practical exercises; a phone can support reading.",
+            "alternative": null,
+            "prerequisite_task_ids": [
+              "roadmap-b6c65bf45c48073c-essential-linux-1",
+              "roadmap-b6c65bf45c48073c-essential-networking-2",
+              "roadmap-b6c65bf45c48073c-essential-security_basics-1",
+              "roadmap-b6c65bf45c48073c-essential-incident_response-1"
+            ],
+            "part": 1,
+            "total_parts": 1,
+            "importance": "milestone"
+          },
+          {
+            "id": "roadmap-b6c65bf45c48073c-optional-communication-1",
+            "skill_id": "communication",
+            "skill_label": "Communication",
+            "title": "Practise: Communication (part 1/2)",
+            "description": "Study toward level 2 from reported/planned level 0. Allocated hours are illustrative and do not certify a skill level. Use the linked reference selectively; this is not its full course duration.",
+            "activity": "Write a concise status update and a respectful clarification question for a sample scenario.",
+            "verification": "Save your notes or artifact and explain one decision, one limitation, and the next practical check to a peer, trainer, or yourself. Completion is self-reported.",
+            "estimated_hours": 3.0,
+            "resource": {
+              "id": "google-technical-writing",
+              "title": "Technical Writing One: clear communication",
+              "provider": "Google for Developers",
+              "url": "https://developers.google.com/tech-writing/one",
+              "cost_inr": 0.0,
+              "is_free": true,
+              "skill_ids": [
+                "content_writing",
+                "communication"
+              ],
+              "estimated_hours": 3.0,
+              "source_note": "Checked official public reading on 2026-10-24. Free refers to the linked text, not software, certification or practical equipment. Hours are a curated demo study allocation, not the provider's course duration. Phone reading does not replace computer practice or qualified supervision.",
+              "last_checked": "2026-10-24",
+              "device_requirement": "any"
+            },
+            "mode": "practical",
+            "device_requirement": "any",
+            "device_note": "A written or sketched example can be prepared with your available device.",
+            "alternative": null,
+            "prerequisite_task_ids": [],
+            "part": 1,
+            "total_parts": 2,
+            "importance": "optional"
+          }
+        ]
+      },
+      {
+        "week_number": 4,
+        "total_hours": 3.0,
+        "tasks": [
+          {
+            "id": "roadmap-b6c65bf45c48073c-optional-communication-2",
+            "skill_id": "communication",
+            "skill_label": "Communication",
+            "title": "Practise: Communication (part 2/2)",
+            "description": "Study toward level 2 from reported/planned level 0. Allocated hours are illustrative and do not certify a skill level. Use the linked reference selectively; this is not its full course duration.",
+            "activity": "Write a concise status update and a respectful clarification question for a sample scenario.",
+            "verification": "Save your notes or artifact and explain one decision, one limitation, and the next practical check to a peer, trainer, or yourself. Completion is self-reported.",
+            "estimated_hours": 1.0,
+            "resource": {
+              "id": "google-technical-writing",
+              "title": "Technical Writing One: clear communication",
+              "provider": "Google for Developers",
+              "url": "https://developers.google.com/tech-writing/one",
+              "cost_inr": 0.0,
+              "is_free": true,
+              "skill_ids": [
+                "content_writing",
+                "communication"
+              ],
+              "estimated_hours": 3.0,
+              "source_note": "Checked official public reading on 2026-10-24. Free refers to the linked text, not software, certification or practical equipment. Hours are a curated demo study allocation, not the provider's course duration. Phone reading does not replace computer practice or qualified supervision.",
+              "last_checked": "2026-10-24",
+              "device_requirement": "any"
+            },
+            "mode": "practical",
+            "device_requirement": "any",
+            "device_note": "A written or sketched example can be prepared with your available device.",
+            "alternative": null,
+            "prerequisite_task_ids": [
+              "roadmap-b6c65bf45c48073c-optional-communication-1"
+            ],
+            "part": 2,
+            "total_parts": 2,
+            "importance": "optional"
+          },
+          {
+            "id": "roadmap-b6c65bf45c48073c-optional-git-1",
+            "skill_id": "git",
+            "skill_label": "Git",
+            "title": "Practise: Git",
+            "description": "Study toward level 1 from reported/planned level 0. Allocated hours are illustrative and do not certify a skill level. Use the linked reference selectively; this is not its full course duration.",
+            "activity": "Track a small sample folder through a change and explain its revision history.",
+            "verification": "Save your notes or artifact and explain one decision, one limitation, and the next practical check to a peer, trainer, or yourself. Completion is self-reported.",
+            "estimated_hours": 2.0,
+            "resource": {
+              "id": "pro-git",
+              "title": "Pro Git: introductory chapters",
+              "provider": "Git project",
+              "url": "https://git-scm.com/book/en/v2",
+              "cost_inr": 0.0,
+              "is_free": true,
+              "skill_ids": [
+                "git"
+              ],
+              "estimated_hours": 3.0,
+              "source_note": "Checked official public reading on 2026-10-24. Free refers to the linked text, not software, certification or practical equipment. Hours are a curated demo study allocation, not the provider's course duration. Phone reading does not replace computer practice or qualified supervision.",
+              "last_checked": "2026-10-24",
+              "device_requirement": "any"
+            },
+            "mode": "practical",
+            "device_requirement": "computer",
+            "device_note": "Use suitable computer access for this local practice exercise.",
+            "alternative": null,
+            "prerequisite_task_ids": [],
+            "part": 1,
+            "total_parts": 1,
+            "importance": "optional"
+          }
+        ]
+      }
+    ],
+    "warnings": [
+      "Your available time may mean a slower learning pace."
+    ],
+    "assumptions": [
+      "6 hours per week, based on self-reported skill levels.",
+      "Two illustrative study hours per missing level plus a one-hour manual verification milestone; these are not provider course durations or proof of proficiency.",
+      "Essential skills and minimum-level prerequisites come first; optional additions follow the core milestone.",
+      "Free-first references; resource fees count once. Estimates exclude devices, data, tools, travel, certification and supervised training costs.",
+      "Tasks and completion are advisory and self-reported; completing a plan does not establish job readiness or automatically change skill levels."
+    ]
+  },
+  "roadmapRequest": {
+    "profile": {
+      "education_level": "diploma",
+      "study_field": "Computer engineering",
+      "goal": "career_exploration",
+      "hours_per_week": 6,
+      "budget_inr": 0,
+      "device_access": "laptop",
+      "language": "en"
+    },
+    "skills": [
+      {
+        "skill_id": "python",
+        "self_reported_level": 2
+      },
+      {
+        "skill_id": "html",
+        "self_reported_level": 2
+      },
+      {
+        "skill_id": "sql",
+        "self_reported_level": 1
+      }
+    ],
+    "interests": [
+      "cybersecurity"
+    ]
+  },
+  "completedTaskIds": []
+}

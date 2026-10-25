@@ -1,0 +1,117 @@
+{
+  "status": "REVIEW_ONLY",
+  "submission_status": "NOT_SUBMITTED",
+  "acknowledgement_verified": false,
+  "applicant": {
+    "applicant": {
+      "name": "Aarush Tendulkar",
+      "role": "Team Lead",
+      "qualification": null,
+      "contact": null
+    },
+    "team_name": "CYBERSTARS",
+    "team_size": 1,
+    "members": [
+      {
+        "name": "Aarush Tendulkar",
+        "role": "Team Lead"
+      }
+    ],
+    "project": "PathForge AI",
+    "competition": "Seva First Innovation Challenge \u2014 Maharashtra Zone",
+    "category": "General Category",
+    "sector": "Education and Employability"
+  },
+  "blockers": [
+    "Mandatory real contact, qualification and eligibility still require applicant verification",
+    "Authenticated portal fields, upload rules and exact cutoff unverified",
+    "Final applicant review and actual portal acknowledgement absent"
+  ],
+  "unfinished": [
+    "Phase 4 public deployment",
+    "Live AI-provider verification and native-speaker Marathi review"
+  ],
+  "warnings": [
+    "Public links unverified; add only if supported by the portal",
+    "ZIP is a review handoff, not the official pitch upload",
+    "Integrity checks do not verify eligibility, PDF rendering or submission"
+  ],
+  "files": [
+    {
+      "path": "docs/pitch/PathForge_AI_CYBERSTARS_PHASE3_DRAFT.pptx",
+      "bytes": 87364,
+      "sha256": "882cead237790c1beccf781d4c50dd1ecc1275c969eb196249cf75130e1fe756"
+    },
+    {
+      "path": "docs/pitch/PathForge_AI_CYBERSTARS_PHASE3_DRAFT.pdf",
+      "bytes": 283494,
+      "sha256": "921525c4978c36324b1a3987e432f16e5d645776c5efd13c185cac85edf68c58"
+    },
+    {
+      "path": "docs/pitch/team.json",
+      "bytes": 467,
+      "sha256": "5bd6ec20134a9a8db66c1007723148368a9bb925f55d9d1b5fa3121f5c5a4b12"
+    },
+    {
+      "path": "docs/pitch/README.md",
+      "bytes": 2744,
+      "sha256": "c405a20c9aee380474f7cbf86a48f8203a3267956b44143723801a66b9968bbc"
+    },
+    {
+      "path": "docs/media/pathforge-walkthrough.webm",
+      "bytes": 22285240,
+      "sha256": "5436ea5ae5c955f47dd2e7a9a883d8c3284bd6355ee7bd75a436c86cd2cbc57f"
+    },
+    {
+      "path": "docs/architecture.svg",
+      "bytes": 2592,
+      "sha256": "263f70c8aa9e4a5bc867a97e9e59a031cec87ac31344f4a4bb4570e78d92e45d"
+    },
+    {
+      "path": "docs/phase4-verification.md",
+      "bytes": 4360,
+      "sha256": "1709cd40e53281a65fe6885c9d438f446cae298b21be038564bf229a981d309d"
+    },
+    {
+      "path": "docs/pilot-protocol.md",
+      "bytes": 2212,
+      "sha256": "23895413798c2791daab7704e51e4a43a0874c9efa1c4266a2d2ab89544bf30e"
+    },
+    {
+      "path": "docs/submission/application-draft.md",
+      "bytes": 4345,
+      "sha256": "d190ef68c9f14ae9558bf251b137462940712d0f71066817c847fa6b14d8190a"
+    },
+    {
+      "path": "docs/submission/portal-checklist.md",
+      "bytes": 3414,
+      "sha256": "6224604a39d8cd830b7fe5b29c7093dc14ee5c6237ea621150cb0d9e23bb88c5"
+    },
+    {
+      "path": "docs/submission/final-checklist.md",
+      "bytes": 3392,
+      "sha256": "87cf97df8eb94ed90349b7878692c72dedd7ffac5ea6012ec25449cc1d6360e9"
+    },
+    {
+      "path": "docs/expert-administration.md",
+      "bytes": 3329,
+      "sha256": "3bc156d89171272f5c56c193f26f3118241c056027932a26b61f415dba7096bc"
+    },
+    {
+      "path": "docs/phase5-verification.md",
+      "bytes": 4649,
+      "sha256": "f2dab6033da1bec88dc0a818b90210eb8d4d2042e25b356706232eebbfd477af"
+    },
+    {
+      "path": "docs/phase3-guide.md",
+      "bytes": 5561,
+      "sha256": "37640518a5b8d85d21ce9178424784fabe8b68cc72b829dd528e1ae4a3f4a649"
+    },
+    {
+      "path": "docs/phase3-verification.md",
+      "bytes": 4736,
+      "sha256": "86bf4a6ccab2d66c627d66711c52242ed1e06546a39ec7a72c2922acb3a74610"
+    }
+  ],
+  "archive_sha256": "f99d309f875ce0e3bfc8bc1965e76113dafc7625a36ed743125e00bd203fe393"
+}

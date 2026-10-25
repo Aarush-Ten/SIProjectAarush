@@ -1,0 +1,39 @@
+# Local environment and secrets
+.submission-private/
+.env
+.env.*
+!.env.example
+!.env.local.example
+
+# Python and runtime databases
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.test-tmp*/
+.backups/
+.tools/
+.ruff_cache/
+.coverage
+htmlcov/
+*.db
+*.db-shm
+*.db-wal
+*.sqlite*
+*.egg-info/
+
+# Next.js, Node, test artifacts
+node_modules/
+.next/
+out/
+coverage/
+playwright-report/
+test-results/
+*.tsbuildinfo
+npm-debug.log*
+
+# Editor and operating-system files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
