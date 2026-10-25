@@ -2,7 +2,7 @@
 import { skillCatalogSchema, matchesSchema, careerSchema, selectedMatchSchema, roadmapSchema } from "@/lib/api/schemas";
 import type { Career, MatchRequest, MatchesResponse, Roadmap, SelectedCareerMatch, SkillCatalog } from "@/lib/types/api";
 
-const apiBase = (process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000").replace(/\/$/, "");
+import { apiBase } from "@/lib/api-origin";
 export class ApiError extends Error {
   constructor(message: string, public readonly status?: number) { super(message); this.name = "ApiError"; }
 }
@@ -19,6 +19,8 @@ export async function apiRequest<T>(path: string, schema: z.ZodType<T>, options:
       ...options,
       headers: { "Accept": "application/json", ...(options.body ? { "Content-Type": "application/json" } : {}), ...options.headers },
       signal: controller.signal,
+      credentials: "omit",
+      redirect: "error",
       cache: "no-store",
     });
     let body: unknown;

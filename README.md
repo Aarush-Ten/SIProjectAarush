@@ -12,6 +12,8 @@ See the [Phase 3 feature and configuration guide](docs/phase3-guide.md) for quiz
 
 ## Requirements
 
+Read the [security audit and deployment requirements](docs/security-audit.md) before public hosting. It covers tested authorization, nonce CSP, request limits, durable AI quotas, dependency/secret scanning and residual risks. Run `npm run security:scan` after installing the isolated locked security tools described there. Apply migrations through `0004_security_quotas`; production requires explicit `ENVIRONMENT`, `ALLOWED_HOSTS` and HTTPS CORS origins. Dynamic nonce-protected HTML must not be shared-cached or statically exported.
+
 **Phase 5 submission preparation:** [application draft](docs/submission/application-draft.md), [portal handoff checklist](docs/submission/portal-checklist.md), and an allowlisted review bundle are prepared. Run `npm run submission:test`, `npm run submission:package`, then `npm run submission:check`. Outputs are in `docs/submission/dist/`. These commands verify file integrity; they do not submit anything. Mandatory contact/qualification, eligibility, authenticated portal requirements and an actual acknowledgement remain unverified. Phase 5 is not complete.
 
 The [final checklist](docs/submission/final-checklist.md) separates completed work, deployment tasks and applicant confirmations. The [Phase 5 verification record](docs/phase5-verification.md) covers the expert console and submission corrections. To enable administration, follow [expert setup](docs/expert-administration.md); the backend token stays private and administration is disabled until configured.

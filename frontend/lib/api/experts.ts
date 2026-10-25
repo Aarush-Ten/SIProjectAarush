@@ -1,5 +1,6 @@
 import { z } from "zod";
 import { apiRequest } from "@/lib/api/client";
+import { apiBase } from "@/lib/api-origin";
 
 export const expertInputSchema = z.object({
   name: z.string().trim().min(2).max(100), bio: z.string().trim().max(2000),
@@ -26,9 +27,8 @@ export async function deleteExpert(token: string, id: string) {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 12000);
   try {
-    const base = (process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000").replace(/\/$/, "");
-    const response = await fetch(`${base}/api/v1/admin/experts/${encodeURIComponent(id)}`, {
-      method: "DELETE", headers: { Authorization: `Bearer ${token}` }, signal: controller.signal, cache: "no-store",
+    const response = await fetch(`${apiBase}/api/v1/admin/experts/${encodeURIComponent(id)}`, {
+      method: "DELETE", headers: { Authorization: `Bearer ${token}` }, signal: controller.signal, cache: "no-store", credentials: "omit", redirect: "error",
     });
     if (!response.ok) throw new Error("Could not remove this expert. Check your credentials and try again.");
   } finally { clearTimeout(timeout); }

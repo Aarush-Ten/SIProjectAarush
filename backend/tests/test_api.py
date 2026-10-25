@@ -197,6 +197,7 @@ def test_unseeded_catalog_returns_503_without_persisting_profile(demo_payload, c
         assert response.json()["error"]["code"] == "catalog_unavailable"
         assert "initialize the demo data" in response.json()["error"]["message"]
         assert set(inspect(application.state.engine).get_table_names()) == {
+            "security_quotas",
             "experts",
             "skills",
             "careers",

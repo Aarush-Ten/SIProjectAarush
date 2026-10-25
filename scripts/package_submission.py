@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 import re
 import zipfile
-import xml.etree.ElementTree as ET
+from defusedxml import ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
 FILES = (
@@ -24,6 +24,7 @@ FILES = (
     "docs/phase5-verification.md",
     "docs/phase3-guide.md",
     "docs/phase3-verification.md",
+    "docs/security-audit.md",
 )
 ARCHIVE = "PathForge_AI_REVIEW_ONLY.zip"
 
@@ -39,13 +40,16 @@ def artifact(root, name):
 
 def validate_pitch(path):
     with zipfile.ZipFile(path) as deck:
+        entries = deck.infolist()
+        if len(entries) > 300 or sum(item.file_size for item in entries) > 20_000_000 or any(item.file_size > 4_000_000 for item in entries):
+            raise ValueError("Pitch archive exceeds safe expanded-size limits")
         if deck.testzip() is not None:
             raise ValueError("Pitch ZIP integrity failure")
         slides = [n for n in deck.namelist() if re.fullmatch(r"ppt/slides/slide\d+\.xml", n)]
         if len(slides) != 6:
             raise ValueError("Official pitch must contain six slides")
         for slide in slides:
-            ET.fromstring(deck.read(slide))
+            ET.fromstring(deck.read(slide), forbid_dtd=True)
 
 
 def records(root):

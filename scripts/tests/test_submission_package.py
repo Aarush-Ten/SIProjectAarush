@@ -5,6 +5,7 @@ import shutil
 import tempfile
 import unittest
 import zipfile
+from defusedxml.common import DefusedXmlException
 
 SPEC = importlib.util.spec_from_file_location("package_submission", Path(__file__).resolve().parents[1] / "package_submission.py")
 module = importlib.util.module_from_spec(SPEC)
@@ -57,6 +58,19 @@ class SubmissionTests(unittest.TestCase):
     def test_invalid_pdf_rejected(self):
         (self.root / module.FILES[1]).write_bytes(b"not a PDF")
         with self.assertRaisesRegex(ValueError, "PDF header"):
+            module.package(self.root)
+
+    def test_xml_entities_rejected(self):
+        with zipfile.ZipFile(self.root / module.FILES[0], "w") as deck:
+            for i in range(1, 7):
+                deck.writestr(f"ppt/slides/slide{i}.xml", '<!DOCTYPE slide [<!ENTITY leak SYSTEM "file:///private">]><slide>&leak;</slide>')
+        with self.assertRaises(DefusedXmlException):
+            module.package(self.root)
+
+    def test_zip_bomb_rejected_before_decompression(self):
+        with zipfile.ZipFile(self.root / module.FILES[0], "w", compression=zipfile.ZIP_DEFLATED) as deck:
+            deck.writestr("ppt/slides/slide1.xml", "x" * 4_000_001)
+        with self.assertRaisesRegex(ValueError, "expanded-size"):
             module.package(self.root)
 
     def test_false_submission_claim_rejected(self):

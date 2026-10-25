@@ -104,14 +104,19 @@
     },
     {
       "path": "docs/phase3-guide.md",
-      "bytes": 5561,
-      "sha256": "37640518a5b8d85d21ce9178424784fabe8b68cc72b829dd528e1ae4a3f4a649"
+      "bytes": 5858,
+      "sha256": "0c3eb95fb10e7d86ead9db87c3a9dc894f50a1b819bfb87360fcfa2248c1d431"
     },
     {
       "path": "docs/phase3-verification.md",
-      "bytes": 4736,
-      "sha256": "86bf4a6ccab2d66c627d66711c52242ed1e06546a39ec7a72c2922acb3a74610"
+      "bytes": 4993,
+      "sha256": "4de0a227a8df633756b9c735b07ab19ea7f08e73962d8059158bcd03ba3a2298"
+    },
+    {
+      "path": "docs/security-audit.md",
+      "bytes": 22745,
+      "sha256": "39cbc1ccdbaf75ac4f63399e345c81df25276fc53d53b561664729b0d37aa2bd"
     }
   ],
-  "archive_sha256": "f99d309f875ce0e3bfc8bc1965e76113dafc7625a36ed743125e00bd203fe393"
+  "archive_sha256": "f0f61f5179b4be1e7fc10b156c6d5b32c0d336aa73e87abb8171508a374cea4c"
 }

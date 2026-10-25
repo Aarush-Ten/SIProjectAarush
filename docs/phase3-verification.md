@@ -1,5 +1,7 @@
 # Phase 3 local verification — 25 October 2026
 
+Historical Phase 3 record: the later [security audit](security-audit.md) adds durable quotas, boundary controls and new regression tests. Its result counts and deployment requirements supersede this earlier snapshot.
+
 The deferred optional features are now implemented. The deterministic core, guest workflow and expert management remain available. Public deployment, real portal submission and acknowledgement are still pending.
 
 ## Results

@@ -14,5 +14,11 @@ services:
         value: sqlite:///./pathforge.db
       - key: LOG_LEVEL
         value: INFO
+      - key: ENVIRONMENT
+        value: production
+      - key: ALLOWED_HOSTS
+        sync: false
+      - key: AI_PROVIDER
+        value: none
       - key: CORS_ORIGINS
         sync: false

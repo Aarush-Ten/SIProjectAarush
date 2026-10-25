@@ -1,5 +1,7 @@
 # Run locally and publish a free public demo
 
+**Security configuration update:** follow [the security audit deployment checklist](security-audit.md#deployment-requirements-and-residual-risks) before these publishing steps. The Render blueprint now sets production mode: supply exact `ALLOWED_HOSTS` (JSON array of API hostnames without schemes) and HTTPS `CORS_ORIGINS`. The API docs are disabled in production by default. Use durable database storage before retaining expert contacts or enabling paid AI. Next.js now requires dynamic rendering for fresh CSP nonces; do not use static export or shared-cached HTML.
+
 Checked against provider documentation on **25 October 2026**. This guide prepares a public demo; it does not claim that an account, domain, GitHub repository, or deployment has already been created.
 
 ## Run the existing checkout on Windows
@@ -125,4 +127,4 @@ The new guidance-expert console requires backend-only `ADMIN_TOKEN` (random, at 
 
 ## Optional learning features
 
-See [Phase 3 configuration and limits](phase3-guide.md). AI is disabled by default and the core needs no key. If enabled, put AI_PROVIDER, AI_MODEL and AI_API_KEY only in backend secrets; keep the request budget low and configure provider quotas. Do not add keys to Vercel frontend public settings. The provider uses a process-local limiter, so multiple workers require shared limiting for one deployment-wide budget.
+See [Phase 3 configuration and limits](phase3-guide.md). AI is disabled by default and the core needs no key. If enabled, put AI_PROVIDER, AI_MODEL and AI_API_KEY only in backend secrets; keep the request budget low and configure provider quotas. Do not add keys to Vercel frontend public settings. The provider uses durable database quota counters shared across workers; general HTTP/auth-failure limits remain process-local and need shared edge controls before scaling.

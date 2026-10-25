@@ -5,12 +5,14 @@ from contextlib import asynccontextmanager
 from time import perf_counter
 
 from fastapi import FastAPI, Request
+from starlette.middleware.trustedhost import TrustedHostMiddleware
 
 from app.api.errors import JsonCORSMiddleware, install_error_handlers
 from app.api.routes import router
 from app.api.experts import router as experts_router
 from app.api.phase3 import router as phase3_router
-from app.services.ai_provider import ProviderBudget
+from app.services.security_quota import DatabaseProviderBudget
+from app.core.security import RequestBudget, SecurityMiddleware
 from app.core.config import Settings, get_settings
 from app.core.database import make_engine
 from app.schemas.api import ErrorResponse
@@ -26,6 +28,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     @asynccontextmanager
     async def lifespan(application: FastAPI) -> AsyncIterator[None]:
         application.state.engine = make_engine(configuration.database_url)
+        application.state.ai_budget = DatabaseProviderBudget(application.state.engine)
         yield
         application.state.engine.dispose()
 
@@ -36,11 +39,14 @@ def create_app(settings: Settings | None = None) -> FastAPI:
             "Phases 1 and 2: stateless deterministic career exploration and weekly learning plans."
         ),
         lifespan=lifespan,
-        responses={code: {"model": ErrorResponse} for code in [404, 405, 422, 500, 503]},
+        docs_url="/docs" if configuration.environment == "development" or configuration.expose_api_docs else None,
+        redoc_url=None,
+        openapi_url="/openapi.json" if configuration.environment == "development" or configuration.expose_api_docs else None,
+        responses={code: {"model": ErrorResponse} for code in [400, 401, 403, 404, 405, 408, 413, 415, 422, 429, 500, 503]},
     )
     application.state.admin_token = configuration.admin_token
     application.state.settings = configuration
-    application.state.ai_budget = ProviderBudget()
+    application.state.admin_failures = RequestBudget()
     application.add_middleware(
         JsonCORSMiddleware,
         allow_origins=configuration.cors_origins,
@@ -49,6 +55,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         allow_headers=["Content-Type", "Authorization"],
     )
     install_error_handlers(application)
+    application.add_middleware(TrustedHostMiddleware, allowed_hosts=configuration.allowed_hosts)
     application.include_router(router)
     application.include_router(experts_router)
     application.include_router(phase3_router)
@@ -71,6 +78,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         )
         return response
 
+    application.add_middleware(SecurityMiddleware, settings=configuration)
     return application
 
 

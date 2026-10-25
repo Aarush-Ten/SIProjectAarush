@@ -1,4 +1,6 @@
 from secrets import compare_digest
+import json
+import logging
 from uuid import uuid4
 
 from fastapi import APIRouter, Depends, HTTPException, Request, Response
@@ -12,6 +14,7 @@ from app.schemas.experts import ExpertInput, ExpertOutput, PublicExpert
 
 router = APIRouter(prefix="/api/v1", tags=["experts"])
 bearer = HTTPBearer(auto_error=False)
+logger = logging.getLogger("pathforge")
 
 
 def administrator(request: Request, response: Response, credentials: HTTPAuthorizationCredentials | None = Depends(bearer)):
@@ -19,24 +22,35 @@ def administrator(request: Request, response: Response, credentials: HTTPAuthori
     secret = request.app.state.admin_token
     if secret is None:
         raise HTTPException(503, "Expert administration is not configured")
+    origin = request.headers.get("origin")
+    if origin is not None and origin not in request.app.state.settings.cors_origins:
+        logger.warning(json.dumps({"event": "admin_denied", "reason": "origin"}))
+        raise HTTPException(403, "Origin is not allowed")
     if credentials is None or not compare_digest(credentials.credentials.encode(), secret.get_secret_value().encode()):
+        logger.warning(json.dumps({"event": "admin_denied", "reason": "credentials"}))
+        if not request.app.state.admin_failures.acquire(request.app.state.settings.admin_failures_per_minute):
+            raise HTTPException(429, "Too many failed administrator requests", headers={"Retry-After": "60"})
         raise HTTPException(401, "Administrator credentials required", headers={"WWW-Authenticate": "Bearer"})
 
 
-@router.get("/admin/experts", response_model=list[ExpertOutput], dependencies=[Depends(administrator)])
+admin_router = APIRouter(prefix="/admin", dependencies=[Depends(administrator)])
+
+
+@admin_router.get("/experts", response_model=list[ExpertOutput])
 def list_experts(session: Session = Depends(database_session)):
     return session.scalars(select(Expert).order_by(Expert.name, Expert.id)).all()
 
 
-@router.post("/admin/experts", response_model=ExpertOutput, status_code=201, dependencies=[Depends(administrator)])
+@admin_router.post("/experts", response_model=ExpertOutput, status_code=201)
 def add_expert(payload: ExpertInput, session: Session = Depends(database_session)):
     expert = Expert(id=str(uuid4()), **payload.model_dump())
     session.add(expert)
     session.commit()
+    logger.info(json.dumps({"event": "expert_admin_action", "operation": "create"}))
     return expert
 
 
-@router.put("/admin/experts/{expert_id}", response_model=ExpertOutput, dependencies=[Depends(administrator)])
+@admin_router.put("/experts/{expert_id}", response_model=ExpertOutput)
 def edit_expert(expert_id: str, payload: ExpertInput, session: Session = Depends(database_session)):
     expert = session.get(Expert, expert_id)
     if expert is None:
@@ -44,16 +58,18 @@ def edit_expert(expert_id: str, payload: ExpertInput, session: Session = Depends
     for name, value in payload.model_dump().items():
         setattr(expert, name, value)
     session.commit()
+    logger.info(json.dumps({"event": "expert_admin_action", "operation": "update"}))
     return expert
 
 
-@router.delete("/admin/experts/{expert_id}", status_code=204, dependencies=[Depends(administrator)])
+@admin_router.delete("/experts/{expert_id}", status_code=204)
 def remove_expert(expert_id: str, session: Session = Depends(database_session)):
     expert = session.get(Expert, expert_id)
     if expert is None:
         raise HTTPException(404, "Expert not found")
     session.delete(expert)
     session.commit()
+    logger.info(json.dumps({"event": "expert_admin_action", "operation": "delete"}))
     return Response(status_code=204, headers={"Cache-Control": "no-store"})
 
 
@@ -71,3 +87,6 @@ def public_experts(response: Response, session: Session = Depends(database_sessi
         is_demo=row.is_demo,
         consultation_available=bool(row.availability.strip()) and not row.is_demo,
     ) for row in rows]
+
+
+router.include_router(admin_router)

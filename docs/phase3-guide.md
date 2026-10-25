@@ -34,7 +34,7 @@ The adapter uses installed locked `httpx` and Google's [structured-output REST f
 
 Only normalized selected skill IDs/levels, catalog career/task references, goal, device, hours and budget are sent. Study-area free text, personal contact, browser identifiers and resource URLs are excluded. Logs omit prompts, outputs, credentials and contacts. Provider handling depends on the account's terms; users explicitly request the optional transfer.
 
-The process-wide limiter allows five calls per rolling minute and 100 per rolling day by default, including failed requests. It ignores forwarded IP headers. Limits reset on restart and multiply across instances/workers: configure provider quotas and a shared limiter before scaling. Request limits are not a guaranteed monetary cap.
+The paid-provider limiter now stores atomic counters in the shared database (migration 0004_security_quotas): five calls per fixed UTC minute and 100 per UTC day by default, including failed requests. It survives application restarts and is shared by workers using the same durable database; database failure denies paid calls. Deleting or recreating the database resets counters. Configure provider quotas as well: request limits are not a guaranteed monetary cap. General HTTP and failed-authentication limits remain process-local; see the security audit for edge/scaling requirements.
 
 ## Contracts and verification limits
 

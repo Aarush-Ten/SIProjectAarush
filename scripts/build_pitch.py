@@ -12,7 +12,8 @@ from pptx.enum.text import MSO_AUTO_SIZE
 
 presentation = Presentation(ROOT / "docs/pitch/official-template.pptx")
 team = json.loads((ROOT / "docs/pitch/team.json").read_text(encoding="utf-8"))
-assert len(presentation.slides) == 6, "Review a changed official template before regenerating"
+if len(presentation.slides) != 6:
+    raise ValueError("Review a changed official template before regenerating")
 
 content = {
     0: {

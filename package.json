@@ -4,6 +4,7 @@
   "private": true,
   "description": "CYBERSTARS Phases 1 and 2: deterministic career exploration and local learning plans",
   "scripts": {
+    "security:scan": "node scripts/security.mjs",
     "submission:package": "node scripts/submission.mjs",
     "submission:check": "node scripts/submission.mjs --check",
     "submission:test": "node scripts/submission.mjs --test",
